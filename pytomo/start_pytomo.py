@@ -266,6 +266,13 @@ def compute_stats(url, cache_uri, do_download_stats, redirect_url=None,
     # video id
     #assert reduce(eq, redirect_list)
     config_pytomo.LOG.info('new redirect urls: %s', redirect_list)
+    config_pytomo.LOG.info('timestamp: %s', timestamp)
+    config_pytomo.LOG.info('url: %s', url)
+    config_pytomo.LOG.info('ip_address: %s', ip_address)
+    config_pytomo.LOG.info('ping_time: %s', ping_times[0])
+#    config_pytomo.LOG.info('download_stats-3: %s', download_stats[3])
+#    config_pytomo.LOG.info('download_stat-13: %s', download_stat[13])
+#    config_pytomo.LOG.info('ASSIGNMENTPRINTTAG %s %s %s %s %s %s', (timestamp, url, ip_address, ping_times[0], download_stats[3], download_stat[13]))
     return (url, cache_url, current_stats), redirect_list
 
 def compute_download_stats(resolver, ip_address, cache_uri, current_stats,
